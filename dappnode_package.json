@@ -1,0 +1,12 @@
+{
+  "name": "lodestar-prater.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "description": "Lodestar is an open-source Ethereum Consensus client and Typescript ecosystem, maintained by ChainSafe Systems",
+  "type": "service",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "categories": ["Developer tools"],
+  "links": {
+    "homepage": "https://your-project-homepage-or-docs.io"
+  },
+  "license": "GPL-3.0"
+}

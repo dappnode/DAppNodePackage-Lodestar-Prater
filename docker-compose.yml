@@ -1,0 +1,6 @@
+version: "3.5"
+services:
+  lodestar-prater.dnp.dappnode.eth:
+    build: .
+    image: "lodestar-prater.dnp.dappnode.eth:0.1.0"
+    restart: unless-stopped
