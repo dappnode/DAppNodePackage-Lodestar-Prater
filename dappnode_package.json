@@ -1,7 +1,12 @@
 {
   "name": "lodestar-prater.dnp.dappnode.eth",
   "version": "0.1.0",
-  "description": "Lodestar is an open-source Ethereum Consensus client and Typescript ecosystem, maintained by ChainSafe Systems",
+  "upstreamVersion": "v1.0.0",
+  "architectures": ["linux/amd64"],
+  "upstreamRepo": "chainnSafe/lodestar",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "shortDescription": "Lodestar Prater is a TypeScript implementation of the Ethereum Goerli/Prater Beacon Chain",
+  "description": "Lodestar Prater is an open-source Ethereum Consensus Client on the Goerli/Prater Testnet and Typescript ecosystem, maintained by ChainSafe Systems",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
@@ -11,10 +16,10 @@
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/chainnsafe/lodestar.git"
+    "url": "https://github.com/dappnode/lodestar-prater.git"
   },
   "bugs": {
-    "url": "https://github.com/chainnsafe/lodestar/issues"
+    "url": "https://github.com/dappnode/lodestar-prater/issues"
   },
   "links": {
     "ui": "http://ui.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",    "homepage": "https://lodestar.chainsafe.io/",
