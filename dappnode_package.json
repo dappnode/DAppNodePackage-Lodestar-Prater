@@ -4,9 +4,43 @@
   "description": "Lodestar is an open-source Ethereum Consensus client and Typescript ecosystem, maintained by ChainSafe Systems",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "categories": ["Developer tools"],
-  "links": {
-    "homepage": "https://your-project-homepage-or-docs.io"
+  "contributors": [
+    "Voss <alex@visnovaventures.com> (https://github.com/alexpeterson91)",
+    "Nabsku <thenabsku@gmail.com (https://github.com/nabsku)"
+  ],
+  "categories": ["Blockchain", "ETH2.0"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chainnsafe/lodestar.git"
   },
-  "license": "GPL-3.0"
+  "bugs": {
+    "url": "https://github.com/chainnsafe/lodestar/issues"
+  },
+  "links": {
+    "ui": "http://ui.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",    "homepage": "https://lodestar.chainsafe.io/",
+    "docs": "https://chainsafe.github.io/lodestar/",
+    "readme": "https://github.com/chainnsafe/lodestar/blob/master/README.md"
+  },
+  "license": "LGPL-3.0",
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.58"
+  },
+  "chain": {
+    "driver": "ethereum-beacon-chain",
+    "serviceName": "beacon-chain",
+    "port": 3500
+  },
+  "warnings": {
+    "onRemove": "Make sure your web3signer does not have this client selected or you will stop validating! (Packages > web3signer > config > client)"
+  },
+  "globalEnvs": [
+    {
+      "envs": ["EXECUTION_CLIENT_PRATER", "MEVBOOST_PRATER"],
+      "services": ["beacon-chain"]
+    },
+    {
+      "envs": ["MEVBOOST_PRATER"],
+      "services": ["validator"]
+    }
+  ]
 }
