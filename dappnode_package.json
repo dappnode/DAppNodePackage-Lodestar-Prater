@@ -22,7 +22,8 @@
     "url": "https://github.com/dappnode/lodestar-prater/issues"
   },
   "links": {
-    "ui": "http://ui.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",    "homepage": "https://lodestar.chainsafe.io/",
+    "ui": "http://ui.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",    
+    "homepage": "https://lodestar.chainsafe.io/",
     "docs": "https://chainsafe.github.io/lodestar/",
     "readme": "https://github.com/chainnsafe/lodestar/blob/master/README.md"
   },
