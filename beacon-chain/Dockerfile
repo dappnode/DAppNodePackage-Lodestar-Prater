@@ -1,14 +1,15 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:next
+FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
-RUN apt-get update && apt-get curl --yes
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+USER root
+RUN apt update && apt install curl --yes
+COPY entrypoint.sh entrypoint.sh
 COPY jwtsecret.hex /jwtsecret
 
-RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 EXPOSE $BEACON_API_PORT
 
 EXPOSE 9000
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]

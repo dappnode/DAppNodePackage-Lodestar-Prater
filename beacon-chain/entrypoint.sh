@@ -10,6 +10,9 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER in
 "goerli-nethermind.dnp.dappnode.eth")
     HTTP_ENGINE="http://goerli-nethermind.dappnode:8551"
     ;;
+"besu-goerli.dnp.dappnode.eth")
+    HTTP_ENGINE="http://besu-goerli.dappnode:8551"
+    ;;
 "goerli-erigon.dnp.dappnode.eth")
     HTTP_ENGINE="http://goerli-erigon.dappnode:8551"
     ;;
@@ -33,7 +36,7 @@ fi
 
 exec node /usr/app/node_modules/.bin/lodestar \
     beacon \
-    --network=mainnet \
+    --network=prater \
     --jwt-secret=/jwtsecret \
     --execution.urls=$HTTP_ENGINE \
     --dataDir=/var/lib/data \
