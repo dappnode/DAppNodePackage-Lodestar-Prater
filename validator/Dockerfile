@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:next
+FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
 RUN apt-get update && apt-get curl jq --yes
 # need Lion's help here
