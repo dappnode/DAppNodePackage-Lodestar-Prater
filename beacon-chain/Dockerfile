@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:${UPSTREAM_VERSION}
+FROM chainsafe/lodestar:next
 
 USER root
 RUN apt update && apt install curl --yes
