@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:${UPSTREAM_VERSION}
+FROM chainsafe/lodestar:next
 
 RUN apt-get update && apt-get curl jq --yes
 
