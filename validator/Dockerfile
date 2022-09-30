@@ -1,7 +1,7 @@
 ARG UPSTREAM_VERSION
 FROM chainsafe/lodestar:next
 
-RUN apt-get update && apt-get curl jq --yes
+RUN apk update && apk add curl jq
 
 #no security parameters in Lodestar currently
 

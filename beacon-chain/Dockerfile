@@ -2,8 +2,8 @@ ARG UPSTREAM_VERSION
 FROM chainsafe/lodestar:next
 
 USER root
-RUN apt update && apt install curl --yes
-COPY entrypoint.sh entrypoint.sh
+RUN apk update && apk add curl
+COPY entrypoint.sh /entrypoint.sh
 COPY jwtsecret.hex /jwtsecret
 
 RUN chmod +x /entrypoint.sh
