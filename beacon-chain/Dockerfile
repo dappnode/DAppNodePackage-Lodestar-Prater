@@ -2,7 +2,7 @@ ARG UPSTREAM_VERSION
 FROM chainsafe/lodestar:next
 
 USER root
-RUN apk update && apk install curl
+RUN apk update && apk add curl
 COPY entrypoint.sh entrypoint.sh
 COPY jwtsecret.hex /jwtsecret
 
