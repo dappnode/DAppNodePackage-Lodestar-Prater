@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:next
+FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
 RUN apk update && apk add curl jq
 
