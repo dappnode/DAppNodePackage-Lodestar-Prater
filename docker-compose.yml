@@ -5,7 +5,7 @@ services:
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v1.2.0-rc.1
+        UPSTREAM_VERSION: v1.1.1-rc.0
     volumes:
       - "beacon-data:/var/lib/data"
     ports:
@@ -27,7 +27,7 @@ services:
     build:
       context: validator
       args:
-        UPSTREAM_VERSION: v1.2.0-rc.1
+        UPSTREAM_VERSION: v1.1.1-rc.0
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
