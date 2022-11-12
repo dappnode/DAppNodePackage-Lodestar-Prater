@@ -3,8 +3,8 @@ FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
 RUN apk update && apk add curl jq
 
-#no security parameters in Lodestar currently
-
+#Add Authentication Token for External Signer
+COPY api-token.txt /usr/local/bin/api-token.txt
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT [ "entrypoint.sh" ]
