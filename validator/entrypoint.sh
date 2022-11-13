@@ -20,6 +20,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --network=${NETWORK} \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
     --graffiti=${GRAFFITI} \
+    --dataDir /var/lib/data \
     --keymanager true \
     --keymanager.authEnabled true \
     --keymanager.port 3500 \
