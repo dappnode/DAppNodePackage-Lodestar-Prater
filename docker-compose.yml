@@ -28,7 +28,8 @@ services:
       context: validator
       args:
         UPSTREAM_VERSION: v1.2.0
-    volumes: "validator-data:/var/lib/data"
+    volumes: 
+      - "validator-data:/var/lib/data"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
