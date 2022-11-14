@@ -27,7 +27,9 @@ services:
     build:
       context: validator
       args:
-        UPSTREAM_VERSION: v1.2.1
+        UPSTREAM_VERSION: v1.2.0
+    volumes: 
+      - "validator-data:/var/lib/data"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -40,3 +42,4 @@ services:
       FEE_RECIPIENT_ADDRESS: ""
 volumes:
   beacon-data: {}
+  validator-data: {}

@@ -20,8 +20,9 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --network=${NETWORK} \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
     --graffiti=${GRAFFITI} \
+    --dataDir /var/lib/data \
     --keymanager true \
-    --keymanager.authEnabled false \
+    --keymanager.authEnabled true \
     --keymanager.port 3500 \
     --keymanager.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
