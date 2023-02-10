@@ -36,7 +36,7 @@ fi
 
 exec node /usr/app/node_modules/.bin/lodestar \
     beacon \
-    --network=prater \
+    --network=goerli \
     --jwt-secret=/jwtsecret \
     --execution.urls=$HTTP_ENGINE \
     --dataDir=/var/lib/data \
