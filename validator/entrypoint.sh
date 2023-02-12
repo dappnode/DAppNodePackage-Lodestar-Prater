@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NETWORK="prater"
+NETWORK="goerli"
 VALIDATOR_PORT=3500
 
 # MEVBOOST: https://github.com/ChainSafe/lodestar/blob/unstable/docs/usage/mev-integration.md
