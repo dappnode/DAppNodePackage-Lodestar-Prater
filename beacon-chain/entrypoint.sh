@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Concatenate EXTRA_OPTS string
 [[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
