@@ -15,11 +15,17 @@ if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_P
     fi
 fi
 
+#Handle Graffiti Character Limit
+oLang=$LANG oLcAll=$LC_ALL
+LANG=C LC_ALL=C 
+graffitiString=${GRAFFITI:0:32}
+LANG=$oLang LC_ALL=$oLcAll
+
 exec node /usr/app/node_modules/.bin/lodestar \
     validator \
     --network=${NETWORK} \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
-    --graffiti=${GRAFFITI} \
+    --graffiti=${graffitiString} \
     --dataDir /var/lib/data \
     --keymanager true \
     --keymanager.authEnabled true \
