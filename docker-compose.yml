@@ -22,6 +22,7 @@ services:
       CHECKPOINT_SYNC_URL: ""
       P2P_PORT: 9512
       EXTRA_OPTS: ""
+      FEE_RECIPIENT_ADDRESS: ""
   validator:
     image: "validator.lodestar-prater.dnp.dappnode.eth:0.1.0"
     build:
