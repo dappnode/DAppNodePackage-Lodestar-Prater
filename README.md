@@ -1,6 +1,6 @@
 # DAppNodePackage Lodestar Prater
 
-**Lodestar prater ETH2.0 Beacon chain + validator**
+**Lodestar Göerli/Prater Ethereum Consensus Layer Client**
 
 Typescript Ethereum Consensus Layer Implementation by ChainSafe.
 
