@@ -45,6 +45,9 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --rest.address 0.0.0.0 \
     --rest.port ${BEACON_API_PORT} \
     --port $P2P_PORT \
+    --metrics \
+    --metrics.port 8008 \
+    --metrics.address 0.0.0.0 \
     --logFile /var/lib/data/beacon.log \
     --logFileLevel debug \
     --logFileDailyRotate 5 \
