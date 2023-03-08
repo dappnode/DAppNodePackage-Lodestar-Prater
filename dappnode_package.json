@@ -29,7 +29,7 @@
   },
   "license": "LGPL-3.0",
   "requirements": {
-    "minimumDappnodeVersion": "0.2.67"
+    "minimumDappnodeVersion": "0.2.68"
   },
   "chain": {
     "driver": "ethereum-beacon-chain",
@@ -45,7 +45,7 @@
       "services": ["beacon-chain"]
     },
     {
-      "envs": ["MEVBOOST_PRATER"],
+      "envs": ["MEVBOOST_PRATER", "FEE_RECIPIENT_PRATER"],
       "services": ["validator"]
     }
   ]
