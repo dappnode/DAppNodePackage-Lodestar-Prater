@@ -41,7 +41,11 @@
   },
   "globalEnvs": [
     {
-      "envs": ["EXECUTION_CLIENT_PRATER", "MEVBOOST_PRATER"],
+      "envs": [
+        "EXECUTION_CLIENT_PRATER",
+        "MEVBOOST_PRATER",
+        "FEE_RECIPIENT_PRATER"
+      ],
       "services": ["beacon-chain"]
     },
     {

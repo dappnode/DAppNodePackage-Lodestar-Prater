@@ -39,7 +39,6 @@ services:
       BEACON_NODE_ADDR: "http://beacon-chain.lodestar-prater.dappnode:3500"
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
-      FEE_RECIPIENT_ADDRESS: ""
 volumes:
   beacon-data: {}
   validator-data: {}
