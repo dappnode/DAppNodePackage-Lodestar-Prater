@@ -15,7 +15,7 @@ if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_P
     fi
 fi
 
-# Chek the env FEE_RECIPIENT_PRATER has a valid ethereum address if not set to the null address
+# Check the env FEE_RECIPIENT_PRATER has a valid ethereum address if not set to the null address
 if [ -n "$FEE_RECIPIENT_PRATER" ] && [[ "$FEE_RECIPIENT_PRATER" =~ ^0x[a-fA-F0-9]{40}$ ]]; then
     FEE_RECIPIENT_ADDRESS="$FEE_RECIPIENT_PRATER"
 else
