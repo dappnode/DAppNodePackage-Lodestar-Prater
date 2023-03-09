@@ -11,7 +11,7 @@
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)",
-    "Nabsku <thenabsku@gmail.com (https://github.com/nabsku)"
+    "Nabsku <thenabsku@gmail.com> (https://github.com/nabsku)"
   ],
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/dappnode/lodestar-prater/issues"
   },
   "links": {
-    "ui": "http://ui.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",
+    "ui": "http://brain.web3signer-prater.dappnode?signer_url=http://web3signer.web3signer-prater.dappnode:9000",
     "homepage": "https://lodestar.chainsafe.io/",
     "docs": "https://chainsafe.github.io/lodestar/",
     "readme": "https://github.com/chainnsafe/lodestar/blob/master/README.md"
@@ -37,7 +37,7 @@
     "port": 3500
   },
   "warnings": {
-    "onRemove": "Make sure your Göerli/Prater StakersUI does not have Lodestar Prater selected as your consensus client or you will stop validating!"
+    "onRemove": "Make sure your Göerli/Prater StakersUI does not have Lodestar Prater selected as your Consensus Layer Client or you will stop validating!"
   },
   "globalEnvs": [
     {
