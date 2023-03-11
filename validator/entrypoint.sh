@@ -35,6 +35,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --metrics.port 5064 \
     --metrics.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
+    --doppelgangerProtectionEnabled \
     --beaconNodes=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
     --logFileLevel=${DEBUG_LEVEL} \
