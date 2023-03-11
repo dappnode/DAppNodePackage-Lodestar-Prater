@@ -1,9 +1,9 @@
 ARG UPSTREAM_VERSION
 FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
-RUN apk update && apk add curl jq
+# curl is required to check if mev-boost is running
+RUN apk update && apk add --no-cache curl
 
-#Add Authentication Token for External Signer
 COPY api-token.txt /var/lib/data/validator-db/api-token.txt
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
