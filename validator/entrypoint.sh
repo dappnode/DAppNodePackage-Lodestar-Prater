@@ -37,7 +37,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
     --beaconNodes=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
-    --logFileLevel=debug \
+    --logFileLevel=${DEBUG_LEVEL} \
     --logFileDailyRotate 5 \
     --logFile /var/lib/data/validator.log \
     $EXTRA_OPTS
