@@ -30,7 +30,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --doppelgangerProtectionEnabled \
     --beaconNodes=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
-    --logFileLevel=${DEBUG_LEVEL} \
+    --logFileLevel=debug \
     --logFileDailyRotate 5 \
     --logFile /var/lib/data/validator.log \
     $EXTRA_OPTS

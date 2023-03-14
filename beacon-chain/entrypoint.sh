@@ -49,7 +49,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --metrics.port 8008 \
     --metrics.address 0.0.0.0 \
     --logFile /var/lib/data/beacon.log \
-    --logLevel ${DEBUG_LEVEL} \
-    --logFileLevel ${DEBUG_LEVEL} \
+    --logLevel=${DEBUG_LEVEL} \
+    --logFileLevel=debug \
     --logFileDailyRotate 5 \
     $EXTRA_OPTS
