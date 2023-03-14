@@ -26,7 +26,12 @@ esac
 if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" == "true" ]; then
     echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost-goerli.dappnode:18550"
-    EXTRA_OPTS="--builder --builder.urls=${MEVBOOST_URL} ${EXTRA_OPTS}"
+    if curl --retry 5 --retry-delay 5 --retry-all-errors "${MEVBOOST_URL}"; then
+        EXTRA_OPTS="--builder --builder.urls=${MEVBOOST_URL} ${EXTRA_OPTS}"
+    else
+        echo "MEV-Boost is enabled but the Prater MEV-Boost package at ${MEVBOOST_URL} is not reachable"
+        curl -X POST -G 'http://my.dappnode/notification-send' --data-urlencode 'type=danger' --data-urlencode title="${MEVBOOST_URL} can not be reached" --data-urlencode 'body=Make sure the Prater MEV-Boost DNP is available and running'
+    fi
 fi
 
 exec node /usr/app/node_modules/.bin/lodestar \
