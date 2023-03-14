@@ -29,7 +29,7 @@
   },
   "license": "LGPL-3.0",
   "requirements": {
-    "minimumDappnodeVersion": "0.2.68"
+    "minimumDappnodeVersion": "0.2.69"
   },
   "chain": {
     "driver": "ethereum-beacon-chain",
