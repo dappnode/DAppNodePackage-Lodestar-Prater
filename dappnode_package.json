@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "upstreamVersion": "v1.5.1",
   "architectures": ["linux/amd64", "linux/arm64"],
-  "upstreamRepo": "chainSafe/lodestar",
+  "upstreamRepo": "ChainSafe/lodestar",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Lodestar Prater is a TypeScript implementation of the Ethereum Goerli/Prater Beacon Chain",
   "description": "Lodestar Prater is an open-source Ethereum Consensus Client on the Goerli/Prater Testnet written in Typescript; maintained by ChainSafe Systems",
@@ -16,16 +16,16 @@
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dappnode/lodestar-prater.git"
+    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Prater.git"
   },
   "bugs": {
-    "url": "https://github.com/dappnode/lodestar-prater/issues"
+    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar-Prater/issues"
   },
   "links": {
     "ui": "http://brain.web3signer-prater.dappnode/",
     "homepage": "https://lodestar.chainsafe.io/",
     "docs": "https://chainsafe.github.io/lodestar/",
-    "readme": "https://github.com/chainnsafe/lodestar/blob/master/README.md"
+    "readme": "https://github.com/ChainSafe/lodestar/blob/stable/README.md"
   },
   "license": "LGPL-3.0",
   "requirements": {
@@ -34,7 +34,7 @@
   "chain": {
     "driver": "ethereum-beacon-chain",
     "serviceName": "beacon-chain",
-    "port": 3500
+    "portNumber": 3500
   },
   "warnings": {
     "onRemove": "Make sure your Göerli/Prater StakersUI does not have Lodestar Prater selected as your Consensus Layer Client or you will stop validating!"
