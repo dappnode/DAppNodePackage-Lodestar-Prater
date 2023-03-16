@@ -80,7 +80,7 @@
       "keepTime": true,
       "tags": ["lodestar"],
       "targetBlank": false,
-      "title": "Lodestar dashboards",
+      "title": "Lodestar Prater Dashboards",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
