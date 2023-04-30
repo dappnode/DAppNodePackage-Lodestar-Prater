@@ -300,7 +300,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "(time() - lodestar_genesis_time) / 12",
+          "expr": "(time() - lodestar_genesis_time{package=\"lodestar-prater.dnp.dappnode.eth\"}) / 12",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -313,7 +313,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "beacon_head_slot",
+          "expr": "beacon_head_slot{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "head slot",
@@ -324,7 +324,7 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "expr": "changes(process_start_time_seconds[5m])",
+          "expr": "changes(process_start_time_seconds{package=\"lodestar-prater.dnp.dappnode.eth\"}[5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "process restart",
@@ -373,7 +373,7 @@
       "pluginVersion": "8.4.2",
       "targets": [
         {
-          "expr": "sum(lodestar_peers_by_direction_count)",
+          "expr": "sum(lodestar_peers_by_direction_count{package=\"lodestar-prater.dnp.dappnode.eth\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -422,7 +422,7 @@
       "pluginVersion": "8.4.2",
       "targets": [
         {
-          "expr": "beacon_head_slot",
+          "expr": "beacon_head_slot{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -470,7 +470,7 @@
       "pluginVersion": "8.4.2",
       "targets": [
         {
-          "expr": "beacon_finalized_epoch",
+          "expr": "beacon_finalized_epoch{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -519,7 +519,7 @@
       "targets": [
         {
           "exemplar": false,
-          "expr": "validator_monitor_validators",
+          "expr": "validator_monitor_validators{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -575,7 +575,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(process_cpu_user_seconds_total{service=\"beacon-chain.lodestar-prater.dappnode\"} [1m])",
+          "expr": "rate(process_cpu_user_seconds_total{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"} [1m])",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -629,7 +629,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "process_heap_bytes{service=\"beacon-chain.lodestar-prater.dappnode\"}",
+          "expr": "process_heap_bytes{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -687,7 +687,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "process_start_time_seconds{service=\"beacon-chain.lodestar-prater.dappnode\"}*1000",
+          "expr": "process_start_time_seconds{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"}*1000",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -755,7 +755,7 @@
       "pluginVersion": "8.4.2",
       "targets": [
         {
-          "expr": "lodestar_sync_status",
+          "expr": "lodestar_sync_status{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -815,7 +815,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "lodestar_version{service=\"beacon-chain.lodestar-prater.dappnode\"}",
+          "expr": "lodestar_version{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -869,7 +869,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "lodestar_version{service=\"beacon-chain.lodestar-prater.dappnode\"}",
+          "expr": "lodestar_version{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -932,7 +932,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "nodejs_version_info{service=\"beacon-chain.lodestar-prater.dappnode\"}",
+          "expr": "nodejs_version_info{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "instant": true,
           "interval": "",
           "legendFormat": "{{version}}",
@@ -1019,7 +1019,7 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "expr": "lodestar_peers_by_direction_count",
+          "expr": "lodestar_peers_by_direction_count{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{direction}}",
@@ -1031,7 +1031,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "lodestar_gossip_peer_score_by_threshold_count{threshold=\"mesh\"}",
+          "expr": "lodestar_gossip_peer_score_by_threshold_count{threshold=\"mesh\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "with_gossip_mesh_score",
@@ -1122,7 +1122,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_attester_miss_total[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_attester_hit_total[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_attester_miss_total[$rate_interval]))\n) > 0",
+          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_attester_hit_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n) > 0",
           "interval": "",
           "legendFormat": "attester",
           "refId": "A"
@@ -1133,7 +1133,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_miss_total[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_hit_total[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_miss_total[$rate_interval]))\n) > 0",
+          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_hit_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_target_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n) > 0",
           "hide": false,
           "interval": "",
           "legendFormat": "target",
@@ -1145,7 +1145,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_miss_total[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_hit_total[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_miss_total[$rate_interval]))\n) > 0",
+          "expr": "sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n/\n(\n  sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_hit_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n  +\n  sum(rate(validator_monitor_prev_epoch_on_chain_head_attester_miss_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval]))\n) > 0",
           "hide": false,
           "interval": "",
           "legendFormat": "head",
@@ -1157,7 +1157,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "1 - avg(validator_monitor_prev_epoch_on_chain_attester_correct_head_total)",
+          "expr": "1 - avg(validator_monitor_prev_epoch_on_chain_attester_correct_head_total{package=\"lodestar-prater.dnp.dappnode.eth\"})",
           "hide": false,
           "interval": "",
           "legendFormat": "wrong_head_ratio",
@@ -1245,7 +1245,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg(lodestar_gossip_mesh_peers_by_type_count) by (instance)",
+          "expr": "avg(lodestar_gossip_mesh_peers_by_type_count{package=\"lodestar-prater.dnp.dappnode.eth\"}) by (instance)",
           "hide": false,
           "interval": "",
           "legendFormat": "core_topics_avg",
@@ -1257,7 +1257,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg(lodestar_gossip_mesh_peers_by_beacon_attestation_subnet_count > 0) by (instance)",
+          "expr": "avg(lodestar_gossip_mesh_peers_by_beacon_attestation_subnet_count{package=\"lodestar-prater.dnp.dappnode.eth\"} > 0) by (instance)",
           "hide": false,
           "interval": "",
           "legendFormat": "attestation_subnets_avg",
@@ -1345,7 +1345,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg(\n  delta(validator_monitor_prev_epoch_on_chain_balance_total[32m])\n)",
+          "expr": "avg(\n  delta(validator_monitor_prev_epoch_on_chain_balance_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[32m])\n)",
           "hide": false,
           "interval": "",
           "legendFormat": "balance_delta",
@@ -1357,7 +1357,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg(\n  delta(validator_monitor_prev_epoch_on_chain_balance[32m])\n)",
+          "expr": "avg(\n  delta(validator_monitor_prev_epoch_on_chain_balance{package=\"lodestar-prater.dnp.dappnode.eth\"}[32m])\n)",
           "hide": false,
           "interval": "",
           "legendFormat": "balance_delta_new",
@@ -1418,7 +1418,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "lodestar_peers_by_client_count",
+          "expr": "lodestar_peers_by_client_count{package=\"lodestar-prater.dnp.dappnode.eth\"}",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -1506,7 +1506,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(beacon_fork_choice_find_head_seconds_sum[$rate_interval])",
+          "expr": "rate(beacon_fork_choice_find_head_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "interval": "",
           "legendFormat": "fork_choice_find_head",
           "refId": "A"
@@ -1517,7 +1517,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(lodestar_block_processor_queue_job_time_seconds_sum[$rate_interval])",
+          "expr": "rate(lodestar_block_processor_queue_job_time_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "block_processor",
@@ -1529,7 +1529,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(lodestar_stfn_epoch_transition_seconds_sum[$rate_interval])",
+          "expr": "rate(lodestar_stfn_epoch_transition_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "stfn_epoch",
@@ -1541,7 +1541,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(lodestar_stfn_process_block_seconds_sum[$rate_interval])",
+          "expr": "rate(lodestar_stfn_process_block_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "stfn_block",
@@ -1553,7 +1553,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(nodejs_gc_duration_seconds_sum{service=\"beacon-chain.lodestar-prater.dappnode\"} [$rate_interval])) by (instance)",
+          "expr": "sum(rate(nodejs_gc_duration_seconds_sum{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"} [$rate_interval])) by (instance)",
           "hide": false,
           "interval": "",
           "legendFormat": "gc_duration_sum",
@@ -1565,7 +1565,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(nodejs_gc_pause_seconds_total{service=\"beacon-chain.lodestar-prater.dappnode\"} [$rate_interval])) by (instance)",
+          "expr": "sum(rate(nodejs_gc_pause_seconds_total{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"} [$rate_interval])) by (instance)",
           "hide": false,
           "interval": "",
           "legendFormat": "gc_pause_sum",
@@ -1577,7 +1577,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "sum(rate(lodestar_bls_thread_pool_time_seconds_sum[$rate_interval])) by (instance)",
+          "expr": "sum(rate(lodestar_bls_thread_pool_time_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])) by (instance)",
           "hide": false,
           "interval": "",
           "legendFormat": "bls_thread_pool_sum",
@@ -1664,7 +1664,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(beacon_reqresp_outgoing_request_roundtrip_time_seconds_sum[$rate_interval])\n/\nrate(beacon_reqresp_outgoing_request_roundtrip_time_seconds_count[$rate_interval])",
+          "expr": "rate(beacon_reqresp_outgoing_request_roundtrip_time_seconds_sum{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])\n/\nrate(beacon_reqresp_outgoing_request_roundtrip_time_seconds_count{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "interval": "",
           "legendFormat": "reqresp_outgoing_roundtrip",
           "refId": "A"
@@ -1675,7 +1675,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(lodestar_eth1_http_client_request_time_seconds_sum{routeId=\"getBlockNumber\"}[$rate_interval])\n/\nrate(lodestar_eth1_http_client_request_time_seconds_count{routeId=\"getBlockNumber\"}[$rate_interval])",
+          "expr": "rate(lodestar_eth1_http_client_request_time_seconds_sum{routeId=\"getBlockNumber\", package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])\n/\nrate(lodestar_eth1_http_client_request_time_seconds_count{routeId=\"getBlockNumber\", package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "eth1_getBlockNumber_roundtrip",
@@ -1687,7 +1687,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg_over_time( scrape_duration_seconds{service=\"beacon-chain.lodestar-prater.dappnode\"} [$rate_interval])",
+          "expr": "avg_over_time( scrape_duration_seconds{service=\"beacon-chain.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"} [$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "prometheus_beacon_scrape_roundtrip",
@@ -1699,7 +1699,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "avg_over_time( scrape_duration_seconds{service=\"validator.lodestar-prater.dappnode\"} [$rate_interval])",
+          "expr": "avg_over_time( scrape_duration_seconds{service=\"validator.lodestar-prater.dappnode\", package=\"lodestar-prater.dnp.dappnode.eth\"} [$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "prometheus_validator_scrape_roundtrip",
@@ -1711,7 +1711,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": false,
-          "expr": "rate(vc_rest_api_client_request_time_seconds_sum{routeId=\"produceAttestationData\"}[$rate_interval])\n/\nrate(vc_rest_api_client_request_time_seconds_count{routeId=\"produceAttestationData\"}[$rate_interval])",
+          "expr": "rate(vc_rest_api_client_request_time_seconds_sum{routeId=\"produceAttestationData\", package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])\n/\nrate(vc_rest_api_client_request_time_seconds_count{routeId=\"produceAttestationData\", package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "rest_produceAttestation_roundtrip",
@@ -1780,7 +1780,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_head_slot",
+              "expr": "beacon_head_slot{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -1838,7 +1838,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_finalized_epoch",
+              "expr": "beacon_finalized_epoch{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -1896,7 +1896,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_previous_justified_epoch",
+              "expr": "beacon_previous_justified_epoch{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -1954,7 +1954,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_current_justified_epoch",
+              "expr": "beacon_current_justified_epoch{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -2012,7 +2012,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_current_validators{status=\"active\"}",
+              "expr": "beacon_current_validators{status=\"active\", package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "",
@@ -2024,7 +2024,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_current_active_validators",
+              "expr": "beacon_current_active_validators{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "hide": true,
               "interval": "",
               "legendFormat": "",
@@ -2083,7 +2083,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "beacon_processed_deposits_total",
+              "expr": "beacon_processed_deposits_total{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -2167,7 +2167,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "delta(beacon_fork_choice_reorg_total[$rate_interval])",
+              "expr": "delta(beacon_fork_choice_reorg_total{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
               "interval": "",
               "legendFormat": "",
               "refId": "A"
@@ -2207,7 +2207,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "rate(beacon_fork_choice_reorg_distance_bucket[$rate_interval])",
+              "expr": "rate(beacon_fork_choice_reorg_distance_bucket{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])",
               "format": "heatmap",
               "interval": "",
               "intervalFactor": 10,
@@ -2262,7 +2262,7 @@
                 "uid": "${DS_PROMETHEUS}"
               },
               "exemplar": false,
-              "expr": "12*rate(beacon_imported_block_parent_distance_bucket[$rate_interval])-1",
+              "expr": "12*rate(beacon_imported_block_parent_distance_bucket{package=\"lodestar-prater.dnp.dappnode.eth\"}[$rate_interval])-1",
               "format": "heatmap",
               "interval": "",
               "intervalFactor": 10,
@@ -2445,7 +2445,7 @@
           "pluginVersion": "7.4.5",
           "targets": [
             {
-              "expr": "(time() - lodestar_genesis_time) / 12 - lodestar_clock_slot",
+              "expr": "(time() - lodestar_genesis_time{package=\"lodestar-prater.dnp.dappnode.eth\"}) / 12 - lodestar_clock_slot{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "clock drift",
@@ -2556,7 +2556,7 @@
           "targets": [
             {
               "exemplar": false,
-              "expr": "lodestar_sync_status",
+              "expr": "lodestar_sync_status{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -2642,7 +2642,7 @@
           "targets": [
             {
               "exemplar": false,
-              "expr": "lodestar_clock_slot - beacon_head_slot",
+              "expr": "lodestar_clock_slot{package=\"lodestar-prater.dnp.dappnode.eth\"} - beacon_head_slot{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "clock drift",
@@ -2668,7 +2668,7 @@
           "targets": [
             {
               "exemplar": false,
-              "expr": "lodestar_sync_status",
+              "expr": "lodestar_sync_status{package=\"lodestar-prater.dnp.dappnode.eth\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
