@@ -31,3 +31,19 @@ fields:
     required: true
     pattern: "^0x[a-fA-F0-9]{40}$"
     patternErrorMessage: Must be a valid address (0x1fd16a...)
+  - id: doppelgangerProtection
+    target:
+      type: environment
+      name: DOPPELGANGER_PROTECTION
+      service: validator
+    title: Enable Doppelganger Protection
+    description: >-
+      Doppelganger protection attempts to detect other instances of a validator operating on the network before any slashable offenses can be committed.
+      This is achieved by staying silent for 2-3 epochs after a validator is started, so it can listen for other instances of that validator before starting to sign potentially slashable messages.
+
+
+      **Note:** Running the same validator twice will inevitably result in slashing. Doppelganger protection should be considered as a last line of defense that might save a validator from being slashed due to operator error, but there is no guarantee it will detect a duplicate validator before slashing conditions arise.
+    enum:
+      - "true"
+      - "false"
+    required: true
