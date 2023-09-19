@@ -34,7 +34,7 @@ if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_P
     fi
 fi
 
-exec node /usr/app/node_modules/.bin/lodestar \
+exec node --max-old-space-size=${MEMORY_LIMIT} /usr/app/node_modules/.bin/lodestar \
     beacon \
     --network=goerli \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
