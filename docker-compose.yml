@@ -21,7 +21,7 @@ services:
       P2P_PORT: 9512
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
-      MEMORY_LIMIT: 4096
+      MEMORY_LIMIT: 6144
   validator:
     image: "validator.lodestar-prater.dnp.dappnode.eth:0.1.0"
     build:
